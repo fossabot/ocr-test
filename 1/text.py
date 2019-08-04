@@ -24,7 +24,7 @@ for  d in test_digits:
   test_cells.append(d)
 test_cells = np.array(test_cells, dtype = np.float32)
 
-#KNN
+# KNN
 knn = cv2.ml.KNearest_create()
 knn.train(cells, cv2.ml.ROW_SAMPLE, cells_labels)
 ret, result, neightbours, dist = knn.findNearest(test_cells, k = 3)
