@@ -22,7 +22,6 @@ def predictint(imvalue):
     x = tf.placeholder(tf.float32, [None, 784])
     W = tf.Variable(tf.zeros([784, 10]))
     b = tf.Variable(tf.zeros([10]))
-    
     def weight_variable(shape):
         initial = tf.truncate_normal(shape, stddev = 0.1)
         return tf.Variable(initial)
