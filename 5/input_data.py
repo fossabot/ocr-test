@@ -20,7 +20,7 @@ def maybe_download(filename, work_directory):
     return filepath
 
 def _read32(bytestream):
-    dt = numpy.dtype(numpy.unit32).newbyteorder(' > ')
+    dt = numpy.dtype(numpy.unit32).newbyteorder('>')
     return numpy.frombuffer(bytestream.read(4), dtype = dt)[0]
 
 def extract_images(filename):

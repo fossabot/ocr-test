@@ -177,4 +177,3 @@ def train_and_predict(input_images):
     
 if __name__ == '__main__':
     train_and_predict([0, 8, 4, 3])
-    
