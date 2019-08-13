@@ -22,9 +22,10 @@ sorted_ctrs = sorted(ctrs, key=lambda ctr: cv2.boundingRect(ctr)[0])
 for i, ctr in enumerate(sorted_ctrs):
     x, y, w, h = cv2.boundingRect(ctr)
     roi = image[y:y + h, x:x + w]
-    cv2.imshow('segment no: ' + str(i), roi)
+    # cv2.imshow('segment no: ' + str(i), roi)
     cv2.rectangle(image, (x, y), (x+w, y+h), (90, 0, 255), 2)
     cv2.waitKey(0)
 
-cv2.imshow('marked area', image)
+cv2.imwrite('result/'+str(i)+'.png',image)
+cv2.imshow('Make Area', image)
 cv2.waitKey(0)
